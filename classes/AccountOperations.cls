@@ -1,19 +1,18 @@
 public class AccountOperations {
-    public static Account setDefaultDescription(Account a) {        
-        // If statements must use braces
-        if (a.Description != null) return a;
-	else a.Description = 'Default Description';
-        
-        // Avoid SOQL inside loops
-        for (Integer i = 0; i < 10; i++) {
-	    List<Account> accounts = [SELECT Id FROM Account];
-	}
-        
-        // Avoid DML Statements inside loops
-        for (Integer i = 0; i < 1; i++) {
-	    update a;
-	}
-       	
+    //Changes of Copado New Repository US1
+    public static Account setDefaultDescription(Account a) {
+        a.Description = 'Default Description Copado New';
         return a;
     }
+    
+
+    public static Account setDefaultURL(Account a) {//US1
+        a.Website = 'www.copa.do';//US1
+        return a;
+    }
+
+    public static Account setDefaultPhone(Account a) {//US2
+    a.Phone = '9879879877';
+        return a;
+    }//US2
 }
